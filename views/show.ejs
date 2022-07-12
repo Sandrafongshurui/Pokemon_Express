@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Pokemon</title>
+    <link type="text/css" rel="stylesheet" href="../public/styles.css">
+</head>
+
+<body>
+    <h1><%= myPageTitle %></h1>
+ 
+    <% if (errMsg !== '') { %>
+        <div class="error">
+            <p>You have an error: <%= errMsg %> </p>
+        </div>
+    <% } else { %> 
+    
+        <h2><%= selectedPokemonId.name.charAt(0).toUpperCase() + selectedPokemonId.name.slice(1) %></h2>
+
+        <figure>
+            <img src="<%= selectedPokemonId.img %>.jpg" />
+        </figure>
+        <!--go back to the route -->
+        <a href="/pokemon">Back</a>
+    <% } %> 
+</body>
+
+</html>

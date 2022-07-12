@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pokemon</title>        
+        <link type="text/css" rel="stylesheet" href="../public/styles.css">
+    </head>
+
+    <body>
+        <!-- by useing this engine, they will be lookiong for the %
+        and chang the words inside in to what you pass in controller, and return an actual html filr -->
+        <h1><%= myPageTitle %></h1>
+
+        <ul>
+            <!-- looping through pokemon list, which is in the controller, taken from the model-->
+            <% pokemon.forEach(p => { %>
+                <a href="/pokemon/<%=pokemon.indexOf(p)%>">
+                <li><%= p.name.charAt(0).toUpperCase() + p.name.slice(1)%> </li>
+                <!-- <img src="<%= p.img %>.jpg" /> -->
+
+            <% }) %>
+            
+        </ul>
+
+    </body>
+
+</html>

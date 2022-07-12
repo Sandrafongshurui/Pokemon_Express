@@ -1,0 +1,28 @@
+body {
+  color: rgb(254, 153, 0);
+  text-align: center;
+
+}
+
+li {
+  list-style: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: large;
+  color: rgb(84, 165, 121);
+  margin-bottom: 0.5em;
+}
+a{
+  text-decoration: none;
+  color: cadetblue;
+}
+
+li:hover{
+  color: darkgreen;
+}
+
+ul{
+  padding: 0;
+}
+
+
