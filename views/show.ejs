@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+<%- include('partials/header'); -%>
+    <!-- this will change the post to a put beacuse of the _ method, it will get rea din the server.js -->
+    <!-- /pokemon/1 -->
+    <form action="/pokemon/<%=selectedPokemonId._id%>?_method=PUT" method="POST">
+        <!-- the name will be the querie-->
+        <!--the vlua the user typed will be the quries param  -->
+        <input type="text" name ="pokemon_name"/>
+        <button type="submit">update </button> 
+    </form>
 
-<head>
-    <title>Pokemon</title>
-    <link type="text/css" rel="stylesheet" href="../public/styles.css">
-</head>
-
-<body>
-    <h1><%= myPageTitle %></h1>
- 
     <% if (errMsg !== '') { %>
         <div class="error">
             <p>You have an error: <%= errMsg %> </p>
         </div>
     <% } else { %> 
-    
+
         <h2><%= selectedPokemonId.name.charAt(0).toUpperCase() + selectedPokemonId.name.slice(1) %></h2>
 
         <figure>
@@ -22,6 +22,9 @@
         <!--go back to the route -->
         <a href="/pokemon">Back</a>
     <% } %> 
-</body>
 
-</html>
+      <!--  ADD DELETE FORM HERE-->
+      <form action="/pokemon/<%=  selectedPokemonId._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE"/>
+    </form>
+<%- include('partials/footer'); -%>

@@ -1,0 +1,13 @@
+<!-- thios will include whats inside youe header.ejs, inside partials folder -->
+<%- include('partials/header'); -%>
+<!-- //by nature the metod is a get request for forms -->
+<!-- now we want to specify as post, like passwords -->
+<form method="POST" action="/pokemon">
+    <!-- the name will be the querie-->
+    <!--the vlua the user typed will be the quries param  -->
+    <input type="text" name = "pokemon_name"/>
+    <button type="submit">Create Pokemon</button> 
+</form>
+
+<%- include('partials/footer'); -%>
+        
