@@ -1,0 +1,6 @@
+1) get ip address in ubuntu terminal : ip addr
+see number 6) ete0,  between inet and /20 copy that port number
+
+2) start our mongo server, add --bind_ip_all at the end : sudo mongod --dbpath ~/data/db --bind_ip_all
+
+3) go to compass: connect your server to ---> mongodb://172.20.143.13:27017 , replace localhost with your copied port number 
